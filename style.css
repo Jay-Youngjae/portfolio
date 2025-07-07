@@ -1,0 +1,98 @@
+body {}
+
+.navbar {
+    color: #696969;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+
+}
+
+.intro-style {
+    font-style: bold;
+    font-size: 24px;
+}
+
+.nav-style {
+    padding: 10px 5px;
+    width: 30%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 1px 10px;
+    margin-left: 10px;
+}
+
+.about-container {
+    padding: 10px 10px;
+    display: flex;
+}
+
+.about-text-container {
+    margin-left: 25px;
+    width: 800px;
+}
+
+.img-style {
+    padding: 20px 30px;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contact-container {
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/*
+.info-container-table {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.info-row {
+    display: table-row;
+}
+*/
+
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info-label {
+    display: table-cell;
+    padding: 20px 40px 20px 100px;
+    /*상 우 하 좌*/
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.info-value {
+    display: table-cell;
+    width: 100%;
+    padding: 20px 100px 20px 20px;
+    color: #666;
+    vertical-align: top;
+    text-align: right;
+    line-height: 2;
+}
+
+.info-row:last-child .info-label,
+.info-row:last-child .info-value {
+    border-bottom: none;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
