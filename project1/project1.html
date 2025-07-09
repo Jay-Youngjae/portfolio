@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 상세 - 0Jae Portfolio</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="intro-style" onclick="goToMain()">0Jae</div>
+            <nav class="nav-style">
+                <a href="#projects">Project</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail-section container">
+        <div class="project-detail-header">
+            <h1 class="project-detail-title" id="projectTitle">환자 자세 모니터링 시스템</h1>
+            <div class="project-detail-period" id="projectPeriod">2024.05 ~ 2024.08</div>
+            <div class="project-detail-awards" id="projectAwards">
+                🏆 한국감성과학회 추계학술대회 수상 | 캡스톤디자인 경진대회 수상
+            </div>
+        </div>
+
+        <!-- Project Images Slider -->
+        <div class="project-images-section">
+            <div class="images-container">
+                <div class="image-nav-arrow prev" id="prevImageArrow" onclick="previousImage()">‹</div>
+                <div class="image-nav-arrow next" id="nextImageArrow" onclick="nextImage()">›</div>
+                
+                <div class="images-grid" id="imagesGrid">
+                    <div class="project-image-item">
+                        <img src="images/IMG_8562.jpg" alt="환자 자세 모니터링 시스템 - 이미지 1" />
+                    </div>
+                    <div class="project-image-item">
+                        <img src="images/IMG_0781.jpg" alt="환자 자세 모니터링 시스템 - 이미지 2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="project-detail-content">
+            <!-- 서비스 개요 -->
+            <section class="overview-section">
+                <h2 class="section-title">서비스 개요</h2>
+                <div class="overview-content" id="projectOverview">
+                    <p>가속도 센서를 활용한 환자 자세 모니터링 시스템으로, 실시간으로 환자의 자세를 측정하고 분석하여 간병인이 효율적으로 환자 상태를 관리할 수 있도록 돕는 헬스케어 솔루션입니다.</p>
+                </div>
+            </section>
+
+            <!-- 주요 기능 -->
+            <section class="features-section">
+                <h2 class="section-title">주요 기능</h2>
+                <div class="content-wrapper">
+                    <div class="feature-list" id="featureList">
+                        <!-- JavaScript로 동적 생성 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사용 기술 -->
+            <section class="tech-section">
+                <h2 class="section-title">사용 기술</h2>
+                <div class="tech-tags-container" id="techTagsContainer">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </section>
+
+            <!-- 주요 성과 -->
+            <section class="achievements-section">
+                <h2 class="section-title">주요 성과</h2>
+                <div class="content-wrapper">
+                    <div class="achievement-list" id="achievementList">
+                        <!-- JavaScript로 동적 생성 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="project1.js"></script>
+</body>
+</html>

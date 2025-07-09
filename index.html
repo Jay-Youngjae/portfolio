@@ -1,106 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS width / height</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0Jae Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 깃허브 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
-</html>
-
 <body>
-  <header class="navbar">
-    <div class="intro-style">0Jae</div>
-    <nav class="nav-style">
-      <a class="#" href=" ">Project</a>
-      <a class="#" href=" ">About</a>
-      <a class="#" href=" ">Contact</a>
-    </nav>
-  </header>
-  <div class="about-container">
-    <img class="img-style" style="float:left" src="https://placehold.co/600x400" alt="" />
-    <div class="about-text-container">
-      <h2>About Me</h2>
-      <p>안녕하세요, 김영재입니다.</p>
-    </div>
-    <div class="contact-container">
-      <h3>Contact</h3>
-      <p>email: jea71882@naver.com</p>
-      <p>github: jea71882@naver.com</p>
-      <p>phone: 010-9087-1832</p>
-    </div>
-  </div>
-  <hr />
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="intro-style">0Jae</div>
+            <nav class="nav-style">
+                <a href="#projects">Project</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- <div class="info-container-table">
-    <div class="info-container">
-      <div class="info-label">희망 직무</div>
-      <div class="info-value">backend developer</div>
-    </div>
-    <div class="info-container">
-      <div class="info-label">주요 기술</div>
-      <div class="info-value">
-        java<br>
-        spring<br>
-        react
-      </div>
-    </div>
-  </div>
-  <hr> -->
-  <div class="info-container">
-    <div class="info-label">희망 직무</div>
-    <div class="info-value">backend developer</div>
-  </div>
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Tech</div>
-    <div class="info-value">
-      1<br>
-      2<br>
-      3
-    </div>
-  </div>
+    <!-- Main Section -->
+    <section class="main-section container" id="about">
+        <div class="profile-image">
+            <img src="images/free-icon-developer-6840541.png"
+                alt="My Profile" />
+        </div>
 
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Education</div>
-    <div class="info-value">
-      상명대학교 (2019.03~2025.02) <br>
-      휴먼지능정보공학전공 (3.71/4.5)
-    </div>
-  </div>
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Activites</div>
-    <div class="info-value">
-      우리fis아카데미 5기 (2025.07~2025.12) <br>
-      UMC 4기 프론트엔드 (2023.03~2023.08)
-    </div>
-  </div>
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Awards</div>
-    <div class="info-value">
-      한국감성과학회 추계학술대회 장려상 (2024.11) <br>
-      캡스톤디자인 경진대회 최우수상 (2024.08)
-    </div>
-  </div>
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Certification</div>
-    <div class="info-value">
-      정보처리기사 <br>
-      Adsp
-    </div>
-  </div>
-  <hr>
-  <div class="info-container">
-    <div class="info-label">Project</div>
-    <div class="info-value">
+        <div class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>안녕하세요, 김영재입니다.</p>
+                <p>새로운 기술을 배우고 도전하는 것을 좋아하며, 사용자 경험을 중요시 합니다.</p>
+                <p>끊임없이 성장하고 발전하는 개발자가 되기 위해 노력하고 있습니다.</p>
+            </div>
+        </div>
 
-    </div>
-  </div>
+        <div class="contact-container" id="contact">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <p>
+                    <!-- 이미지 파일 로드 class -->
+                    <i class="fas fa-envelope"></i>
+                    jea71882@naver.com
+                </p>
+                <p>
+                    <a href="https://github.com/Jay-Youngjae" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> github.com/Jay-Youngjae
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    010-9087-1832
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+            <div class="project-nav-arrow prev" id="prevArrow" onclick="previousPage()">‹</div>
+            <div class="project-nav-arrow next" id="nextArrow" onclick="nextPage()">›</div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" onclick="openProject(1)">
+                    <div class="project-image">Project Image 1</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                        <div class="project-title">리틀 밴드</div>
+                        <div class="project-period">2024.05 ~ 2024.11</div>
+                        </div>
+                        <div class="project-description">
+                            시니어 케어를 주제로 자세 데이터 분석 및 어플리케이션 개발을 수행했으며,
+                            한국감성과학회 추계학술대회와 캡스톤디자인 경진대회 수상작입니다.
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Application</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject(2)">
+                    <div class="project-image">Project Image 2</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                        <div class="project-title">프로젝트2</div>
+                        <div class="project-period">2024.05 ~ 2024.11</div>
+                        </div>
+                        <div class="project-description">
+                            프로젝트2 내용
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">WEB</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject(3)">
+                    <div class="project-image">Project Image 3</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                        <div class="project-title">프로젝트3</div>
+                        <div class="project-period">2024.03 ~ 2024.11</div>
+                        </div>
+                        <div class="project-description">
+                            프로젝트3 내용
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">WEB</span>
+                            <span class="tag">Education</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education and Activities Section -->
+    <section class="education-section container">
+        <h2 class="section-title">교육 및 활동</h2>
+
+        <div class="content-wrapper">
+            <div class="activity-item">
+                <div class="item-header">
+                    <div class="item-title">우리FIS 아카데미 교육</div>
+                    <div class="item-period">2025.07 ~ 2025.12 (ing)</div>
+                </div>
+                <div class="item-details">
+                    <ul>
+                        <li>클라우드 서비스 개발 교육 수강중</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="item-header">
+                    <div class="item-title">상명대학교 휴먼지능정보공학과</div>
+                    <div class="item-period">2019.03 ~ 2025.02</div>
+                </div>
+                <div class="item-details">
+                    <ul>
+                        <li>3.71/4.5</li>
+                        <li>소프트웨어 공학, 알고리즘, 딥러닝 등의 교과목을 수강하며, 동아리 및 프로젝트, 학회 활동 수행</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="item-header">
+                    <div class="item-title">연합동아리 UMC 4기</div>
+                    <div class="item-period">2023.03 ~ 2023.08</div>
+                </div>
+                <div class="item-details">
+                    <ul>
+                        <li>Web 프론트엔드 파트에서 활동</li>
+                        <li>스터디 우수자 선정</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards-section container">
+        <h2 class="section-title">수상</h2>
+
+        <div class="content-wrapper">
+            <div class="award-item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <div class="item-title">한국감성과학회 추계학술대회 장려상</div>
+                        <div class="item-date">2024.11.23</div>
+                    </div>
+                    <div class="item-organization">한국감성과학회</div>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <div class="item-title">캡스톤디자인 경진대회 최우수상</div>
+                        <div class="item-date">2024.08.12</div>
+                    </div>
+                    <div class="item-organization">상명대학교</div>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <div class="item-title">졸업 포트폴리오 페스티벌 장려상</div>
+                        <div class="item-date">2024.11.05</div>
+                    </div>
+                    <div class="item-organization">상명대학교 융합공과대학</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications and Skills Section -->
+    <section class="certifications-section container">
+        <h2 class="section-title">보유 자격증</h2>
+        <div class="certifications-grid">
+            <span class="certification-tag">정보처리기사</span>
+            <span class="certification-tag">ADSP</span>
+        </div>
+
+        <h2 class="section-title skills-title">기술 스택</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 class="category-title">Languages</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Libraries & Frameworks</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Spring</span>
+                    <span class="skill-tag">React.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script> 
+    <!-- DOM접근과 페이지 렌더링 지연 방지를 위해 하단에 배치 -->
 </body>
+
+</html>
