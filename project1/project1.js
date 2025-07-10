@@ -3,8 +3,8 @@ const projectData = {
   1: {
     title: "환자 자세 모니터링 시스템",
     period: "2024.03 ~ 2024.08",
-    awards: "🏆 한국감성과학회 추계학술대회 수상 | 캡스톤디자인 경진대회 수상",
-    images: ["images/IMG_0781.jpg", "images/IMG_8562.jpg"],
+    awards: "한국감성과학회 추계학술대회 수상 | 캡스톤디자인 경진대회 수상",
+    images: ["free-icon-developer-6840541.png", "free-icon-developer-6840541.png"],
     overview:
       "가속도 센서를 활용한 환자 자세 모니터링 시스템으로, 실시간으로 환자의 자세를 측정하고 분석하여 간병인이 효율적으로 환자 상태를 관리할 수 있도록 돕는 헬스케어 솔루션입니다.",
     features: [

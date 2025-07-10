@@ -7,7 +7,12 @@
     <title>0Jae Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- 깃허브 아이콘 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        onload="this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
 
 </head>
 
@@ -27,8 +32,7 @@
     <!-- Main Section -->
     <section class="main-section container" id="about">
         <div class="profile-image">
-            <img src="images/free-icon-developer-6840541.png"
-                alt="My Profile" />
+            <img src="images/free-icon-developer-6840541.png" fetchpriority="high" alt="My Profile" />
         </div>
 
         <div class="about-section">
@@ -74,8 +78,8 @@
                     <div class="project-image">Project Image 1</div>
                     <div class="project-content">
                         <div class="project-header">
-                        <div class="project-title">리틀 밴드</div>
-                        <div class="project-period">2024.05 ~ 2024.11</div>
+                            <div class="project-title">리틀 밴드</div>
+                            <div class="project-period">2024.05 ~ 2024.11</div>
                         </div>
                         <div class="project-description">
                             시니어 케어를 주제로 자세 데이터 분석 및 어플리케이션 개발을 수행했으며,
@@ -93,8 +97,8 @@
                     <div class="project-image">Project Image 2</div>
                     <div class="project-content">
                         <div class="project-header">
-                        <div class="project-title">프로젝트2</div>
-                        <div class="project-period">2024.05 ~ 2024.11</div>
+                            <div class="project-title">프로젝트2</div>
+                            <div class="project-period">2024.05 ~ 2024.11</div>
                         </div>
                         <div class="project-description">
                             프로젝트2 내용
@@ -110,8 +114,8 @@
                     <div class="project-image">Project Image 3</div>
                     <div class="project-content">
                         <div class="project-header">
-                        <div class="project-title">프로젝트3</div>
-                        <div class="project-period">2024.03 ~ 2024.11</div>
+                            <div class="project-title">프로젝트3</div>
+                            <div class="project-period">2024.03 ~ 2024.11</div>
                         </div>
                         <div class="project-description">
                             프로젝트3 내용
@@ -170,7 +174,7 @@
                 </div>
             </div>
 
-            
+
         </div>
     </section>
 
@@ -240,7 +244,7 @@
         </div>
     </section>
 
-    <script src="app.js"></script> 
+    <script defer src="app.js"></script>
     <!-- DOM접근과 페이지 렌더링 지연 방지를 위해 하단에 배치 -->
 </body>
 
