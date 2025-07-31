@@ -5,8 +5,22 @@ const ProjectCard = ({ project, onClick }) => (
     className="min-w-[300px] max-w-[300px] flex-shrink-0 bg-white/80 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer h-96"
     onClick={() => onClick(project.id)}
   >
-    <div className="w-full h-48 bg-gray-300 flex items-center justify-center text-gray-600 text-sm">
-      {project.image}
+    <div className="w-full h-48 bg-white overflow-hidden flex items-center justify-center">
+      <img
+        src={project.image || "/placeholder.svg"}
+        alt={project.title}
+        className="w-full h-full object-contain"
+        onError={(e) => {
+          e.target.style.display = "none"
+          e.target.nextSibling.style.display = "flex"
+        }}
+      />
+      <div
+        className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 text-sm"
+        style={{ display: "none" }}
+      >
+        {project.title}
+      </div>
     </div>
     <div className="p-4 h-48 flex flex-col justify-between">
       <div>

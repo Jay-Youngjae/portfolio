@@ -4,6 +4,7 @@ import { useState } from "react"
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [imageErrors, setImageErrors] = useState({})
 
   const nextImage = () => {
     if (currentImageIndex < project.images.length - 1) {
@@ -17,11 +18,23 @@ const ProjectModal = ({ project, onClose }) => {
     }
   }
 
+  const handleImageError = (index) => {
+    setImageErrors((prev) => ({
+      ...prev,
+      [index]: true,
+    }))
+  }
+
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose()
     }
   }
+
+  const currentImageSrc =
+    project.images && project.images[currentImageIndex] ? project.images[currentImageIndex] : project.image
+
+  const hasImageError = imageErrors[currentImageIndex]
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={handleBackdropClick}>
@@ -39,7 +52,7 @@ const ProjectModal = ({ project, onClose }) => {
 
         {/* 이미지 섹션 */}
         <div className="relative px-6 py-4">
-          <div className="relative overflow-hidden rounded-lg bg-gray-100 h-80">
+          <div className="relative overflow-hidden rounded-lg bg-white h-80 flex items-center justify-center">
             {project.images && project.images.length > 1 && (
               <>
                 <button
@@ -85,9 +98,21 @@ const ProjectModal = ({ project, onClose }) => {
               </>
             )}
 
-            <div className="w-full h-full flex items-center justify-center text-gray-600">
-              {project.images && project.images[currentImageIndex] ? project.images[currentImageIndex] : project.image}
-            </div>
+            {!hasImageError ? (
+              <img
+                key={`${currentImageIndex}-${currentImageSrc}`}
+                src={currentImageSrc || "/placeholder.svg"}
+                alt={`${project.title} - 이미지 ${currentImageIndex + 1}`}
+                className="max-w-full max-h-full object-contain"
+                onError={() => handleImageError(currentImageIndex)}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-gray-600">
+                {project.images && project.images[currentImageIndex]
+                  ? `이미지 ${currentImageIndex + 1}`
+                  : project.title}
+              </div>
+            )}
           </div>
 
           {/* 이미지 인디케이터 */}
@@ -153,7 +178,7 @@ const ProjectModal = ({ project, onClose }) => {
           {/* 사용 기술 */}
           <div>
             <h3 className="text-lg font-semibold text-slate-800 mb-3">사용 기술</h3>
-            <div className="flex flex-wrap items-center justify-center gap-2">
+            <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, index) => (
                 <span key={index} className="bg-slate-600 text-white px-3 py-1 rounded-full text-sm">
                   {tag}

@@ -1,10 +1,17 @@
-const ProfileImage = () => (
-  <div className="w-80 h-80 mx-auto rounded-full overflow-hidden flex items-center justify-center shadow-lg">
-    <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
-      Profile Image
+const ProfileImage = () => {
+  return (
+    <div className="text-center">
+      <div className="w-48 h-48 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-600 mb-4">
+        {/* 실제 이미지를 사용할 때는 이렇게: */}
+        {/* <img 
+          src="/src/images/profile/profile.jpg" 
+          alt="Profile" 
+          className="w-full h-full object-cover rounded-full"
+        /> */}
+        Profile Image
+      </div>
     </div>
-  </div>
-);
+  )
+}
 
-
-export default ProfileImage;
+export default ProfileImage
