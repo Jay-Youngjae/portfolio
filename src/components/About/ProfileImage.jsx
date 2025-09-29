@@ -1,7 +1,7 @@
 const ProfileImage = () => {
   return (
     <div className="text-center">
-      <div className="w-48 h-48 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-600 mb-4">
+      <div className="w-72 h-72 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-600 mb-8">
         {/* 실제 이미지를 사용할 때는 이렇게: */}
         {/* <img 
           src="/src/images/profile/profile.jpg" 

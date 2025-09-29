@@ -64,7 +64,7 @@ const portfolioData = {
         "/images/projects/fe_seminar/seminar_likeComponent.png",
         "/images/projects/fe_seminar/seminar_vdom_folder.png",
         "/images/projects/fe_seminar/seminar_benchmark.png",
-        "/images/projects/fe_seminar/seminar_award.png"
+        "/images/projects/fe_seminar/seminar_award.png",
       ],
       image: "/images/projects/seminar/seminar_title.png",
       links: [
@@ -136,17 +136,17 @@ const portfolioData = {
       details: ["클라우드 서비스 개발 교육 수강중"],
     },
     {
+      title: "연합동아리 UMC 4기",
+      period: "2023.03 ~ 2023.08",
+      details: ["Web 프론트엔드 파트에서 활동", "스터디 우수자 선정"],
+    },
+    {
       title: "상명대학교 휴먼지능정보공학과",
       period: "2019.03 ~ 2025.02",
       details: [
         "3.71/4.5",
         "소프트웨어 공학, 알고리즘, 딥러닝 등의 교과목을 수강하며, 동아리 및 프로젝트, 학회 활동 수행",
       ],
-    },
-    {
-      title: "연합동아리 UMC 4기",
-      period: "2023.03 ~ 2023.08",
-      details: ["Web 프론트엔드 파트에서 활동", "스터디 우수자 선정"],
     },
   ],
   awards: [
@@ -168,7 +168,7 @@ const portfolioData = {
   ],
   skills: {
     languages: ["Java", "JavaScript", "Python"],
-    frameworks: ["Spring", "React.js"],
+    frameworks: ["Spring", "React.js", "Next.js", "MySQL"],
   },
   certifications: ["정보처리기사", "ADSP", "토스 IH"],
 }

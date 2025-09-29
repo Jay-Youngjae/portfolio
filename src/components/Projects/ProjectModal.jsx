@@ -178,9 +178,13 @@ const ProjectModal = ({ project, onClose }) => {
           {/* 사용 기술 */}
           <div>
             <h3 className="text-lg font-semibold text-slate-800 mb-3">사용 기술</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {project.tags.map((tag, index) => (
-                <span key={index} className="bg-slate-600 text-white px-3 py-1 rounded-full text-sm">
+                <span
+                  key={index}
+                  className="text-white px-3 py-1 rounded-full text-sm"
+                  style={{ backgroundColor: "#42655B" }}
+                >
                   {tag}
                 </span>
               ))}
